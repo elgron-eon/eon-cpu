@@ -3,6 +3,11 @@
 This is the official **EON** Cpu specification. EON is a simple 16/32/64 bits cpu invented by me. It's a RISC design
 with register to register operations and explicit load/store.
 
+I try hard to give it a motorola 68000 feel. It was a pleasure to do m68k assembler programming in the 80's. Maybe I will be able
+to retain some of it's spirit so you may also enjoy **EON** assembler programming.
+
+I present you in my account repos: an assembler, boot ROM, and two hardware implementations. At Foot page there are the relevant links.
+
 # Visible Arquitecture
 
 * 16 general purpose registers of 16/32/64 bits
@@ -11,12 +16,12 @@ with register to register operations and explicit load/store.
 * no branch delay slots
 
 # Opcode map
-An opcode takes up to three 16 bit words. The PC internal register points to the next instruction. PC register always points to a even address.
+An opcode takes up to three 16 bit words. The PC internal register points to the next instruction. PC register always points to an even address.
 This table show the mapping:
 
 ```
-  FEDC BA98 7654 3210 IMM       0     1       2     3     4     5     6     7      8       9      A      B     C      D  E   F`
-  =================================================================================================================================`
+  FEDC BA98 7654 3210 IMM       0     1       2     3     4     5     6     7      8       9      A      B     C      D  E   F
+  ============================================================================================================================
   0000 rd-- rz-- op--           _ zext1   zext2 zext4 bswap sext1 sext2 sext4  csetz  csetnz  csetn csetnn csetp csetnp in out
   0000 sp-- rs-- op-- #-#    jmpr  jalr       _     _ istat  tlba  tlbv     _   get#    set# leasp#   sor#  li##  lea##  _   _
   0000 sp-- sp-- op-- #-# illegal   nop syscall  wait  iret  sret  eret   tlb enter# signal#      _      _ jmp##  jal##  _   _
@@ -35,3 +40,10 @@ This table show the mapping:
 * **i16** is a signed 16 bit literal
 * ` #` i16 is a 16 signed bit literal
 * `##` i32 is a 32 signed bit literal
+
+# Links
+* [eon classical assembler](https://github.com/elgron-eon/eonasm)
+* [eon ROM](https://github.com/elgron-eon/eonrom)
+* [eon with arduino and real hardware](https://github.com/elgron-eon/eonduino)
+* [eon with tinyfpga BX in verilog](https://github.com/elgron-eon/eonv)
+
