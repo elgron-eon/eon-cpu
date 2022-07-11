@@ -6,7 +6,7 @@ with register to register operations and explicit load/store.
 I try hard to give it a motorola 68000 feel. It was a pleasure to do m68k assembler programming in the 80's. Maybe I will be able
 to retain some of it's spirit so you may also enjoy **EON** assembler programming.
 
-I present you in my account repos: an assembler, boot ROM, and two hardware implementations. At Foot page there are the relevant links.
+In my account you can find related repositories: an assembler, boot ROM, and two hardware implementations. At page foot there are the relevant links.
 
 # Visible Arquitecture
 
@@ -38,8 +38,8 @@ This table show the mapping:
 * **op** is a 4 bit opcode
 * **`_`** is a unmapped opcode
 * **i16** is a signed 16 bit literal
-* ` #` i16 is a 16 signed bit literal
-* `##` i32 is a 32 signed bit literal
+* ` #` is a 16 signed bit literal
+* `##` is a 32 signed bit literal
 
 # Links
 * [eon classical assembler](https://github.com/elgron-eon/eonasm)
