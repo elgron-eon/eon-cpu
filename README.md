@@ -46,4 +46,5 @@ This table show the mapping:
 * [eon ROM](https://github.com/elgron-eon/eonrom)
 * [eon with arduino and real hardware](https://github.com/elgron-eon/eonduino)
 * [eon with tinyfpga BX in verilog](https://github.com/elgron-eon/eonv)
+* [eon with esp8266/esp32](https://github.com/elgron-eon/eon-esp32)
 
